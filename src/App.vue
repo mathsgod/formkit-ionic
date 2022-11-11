@@ -25,6 +25,7 @@ let options = {
     <pre wrap>{{ data }}</pre>
 
     <FormKit type="form" v-model="data">
+    
       <FormKit type="ionInput" name="input1" label="input1" validation="required|email"
         placeholder="this is a placeholder" label-position="stacked" help="this is a help text" />
 

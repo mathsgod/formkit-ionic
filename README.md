@@ -1,16 +1,34 @@
-# Vue 3 + TypeScript + Vite
+# formkit-ionic
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Setup
 
-## Recommended IDE Setup
+1. This plugin requires the [Ionic](https://ionicframework.com/docs/vue/quickstart) and [FormKit](https://formkit.com/)
+2. Setup in main.ts
+```typescript
+const app = createApp(App);
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+import { plugin, defaultConfig } from '@formkit/vue'
+import { createIonicPlugin } from "formkit-ionic";
+app.use(plugin, defaultConfig({
+    plugins: [createIonicPlugin()]
+}))
+```
 
-## Type Support For `.vue` Imports in TS
+## Usage
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+### Basic
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+```html 
+<FormKit type="form" v-model="data">
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+    <FormKit type="ionInput" name="input1" label="input1" validation="required|email"
+    placeholder="this is a placeholder" label-position="stacked" help="this is a help text" />
+
+    <FormKit type="ionSelect" name="select1" label="ionSelect" validation="required" label-position="stacked"
+    placeholder="Select one" help="this is a help text" :options="options">
+    </FormKit>
+
+    <FormKit type="ionTextarea" name="textarea1" label="ionTextarea" label-position="stacked" />
+
+</FormKit>
+```
