@@ -1,0 +1,25 @@
+{
+  "name": "formkit-ionic",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@formkit/vue": "^1.0.0-beta.11",
+    "@ionic/vue": "^6.3.6",
+    "@ionic/vue-router": "^6.3.6",
+    "@vitejs/plugin-vue": "^3.1.0",
+    "typescript": "^4.6.4",
+    "unplugin-vue-components": "^0.22.9",
+    "vite": "^3.1.0",
+    "vue-router": "^4.1.6",
+    "vue-tsc": "^0.40.4"
+  }
+}
