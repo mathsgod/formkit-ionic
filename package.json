@@ -1,6 +1,6 @@
 {
   "name": "formkit-ionic",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
