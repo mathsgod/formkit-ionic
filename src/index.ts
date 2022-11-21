@@ -1,7 +1,7 @@
 import Item from './components/Item.vue';
 import Input from './components/Input.vue';
-import Select from './components/Select';
-import Textarea from './components/Textarea';
+import Select from './components/Select.vue';
+import Textarea from './components/Textarea.vue';
 
 export const createIonicPlugin = () => {
     return (node: any) => {

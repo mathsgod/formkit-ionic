@@ -1,5 +1,5 @@
 <script setup>
-import { IonInput } from '@ionic/vue'
+import { IonTextarea } from '@ionic/vue'
 import { ref, watch } from "vue"
 import Item from './Item.vue'
 let props = defineProps({
@@ -15,6 +15,6 @@ watch(() => value.value, (val) => {
 </script>
 <template>
     <Item :context="context">
-        <ion-input v-model="value" @ion-blur="context.handlers.blur" />
+        <IonTextarea v-model="value" @ion-blur="context.handlers.blur" />
     </Item>
 </template>
