@@ -18,13 +18,17 @@ let options = {
   carrot: 'Carrot',
   cucumber: 'Cucumber',
 };
+
+let onSubmit = () => {
+  console.log(data.value);
+};
 </script>
 
 <template>
   <div>
     <pre wrap>{{ data }}</pre>
 
-    <FormKit type="form" v-model="data">
+    <FormKit type="form" v-model="data" :actions="false" @submit="onSubmit">
 
 
       <FormKit type="ionInput" name="input1" label="input1" validation="required|email"
@@ -39,8 +43,16 @@ let options = {
       </FormKit>
 
       <FormKit type="ionTextarea" name="textarea1" label="ionTextarea" label-position="stacked" />
-
+      
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="danger" expand="block">Sign In</ion-button>
+        </ion-col>
+      </ion-row>
     </FormKit>
+
+
+
 
   </div>
 
