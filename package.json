@@ -16,7 +16,7 @@
     "dist"
   ],
   "devDependencies": {
-    "@formkit/vue": "^1.0.0-beta.11",
+    "@formkit/vue": "^1.0.0-beta.12",
     "@ionic/vue": "^6.3.6",
     "@ionic/vue-router": "^6.3.6",
     "@vitejs/plugin-vue": "^3.1.0",

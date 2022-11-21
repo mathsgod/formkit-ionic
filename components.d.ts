@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     IonSelect: typeof import('@ionic/vue')['IonSelect']
     IonSelectOption: typeof import('@ionic/vue')['IonSelectOption']
     IonTextarea: typeof import('@ionic/vue')['IonTextarea']
+    Item: typeof import('./src/components/Item.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Select: typeof import('./src/components/Select.vue')['default']

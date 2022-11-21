@@ -1,5 +1,6 @@
 <script setup>
 import { ref, watch } from "vue"
+import Item from "./Item.vue"
 const props = defineProps({
     context: Object,
 })
@@ -10,23 +11,12 @@ watch(() => value.value, (val) => {
     props.context.node.input(val);
 })
 
-let error = ref(null);
-let showErrorMessage = () => {
-    let messagesArray = Object.entries(props.context.messages);
-    error.value = messagesArray.length > 0 ? messagesArray[0][1].value : null;
-}
-
-props.context.node.on("message-added", showErrorMessage)
-props.context.node.on("message-updated", showErrorMessage)
-props.context.node.on("message-removed", showErrorMessage)
+let type = props.context.inputType || 'text';
 
 </script>
 
 <template>
-    <ion-item :class="{ 'ion-invalid': error }">
-        <ion-label :position="context.labelPosition">{{ context.label }}</ion-label>
-        <ion-input v-model="value" v-bind="context.attrs" @ionBlur="context.handlers.blur" />
-        <ion-note slot="helper" v-text="context.help"></ion-note>
-        <ion-note slot="error" v-text="error"></ion-note>
-    </ion-item>
+    <Item :context="context">
+        <ion-input v-model="value" v-bind="context.attrs" @ionBlur="context.handlers.blur" :type="type" />
+    </Item>
 </template>

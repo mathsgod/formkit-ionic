@@ -25,9 +25,14 @@ let options = {
     <pre wrap>{{ data }}</pre>
 
     <FormKit type="form" v-model="data">
-    
+
+
       <FormKit type="ionInput" name="input1" label="input1" validation="required|email"
-        placeholder="this is a placeholder" label-position="stacked" help="this is a help text" />
+        placeholder="this is a placeholder" label-position="stacked" help="this is a help text" clear-input />
+
+      <FormKit type="ionInput" input-type="password" name="input1" label="Password" validation="required"
+        placeholder="this is a placeholder" label-position="stacked" help="this is a help text" clear-input />
+
 
       <FormKit type="ionSelect" name="select1" label="ionSelect" validation="required" label-position="stacked"
         placeholder="Select one" help="this is a help text" :options="options">
@@ -36,7 +41,7 @@ let options = {
       <FormKit type="ionTextarea" name="textarea1" label="ionTextarea" label-position="stacked" />
 
     </FormKit>
-    
+
   </div>
 
 </template>

@@ -1,3 +1,4 @@
+import Item from './Item.vue';
 import Input from './Input.vue';
 import Select from './Select.vue';
 import Textarea from './Textarea.vue';
@@ -5,12 +6,20 @@ import { FormKitPlugin } from '@formkit/core';
 
 export const createIonicPlugin = (): FormKitPlugin => {
     return (node) => {
+        if (node.props.type === "ionItem") {
+            node.define({
+                type: "input",
+                component: Item
+            })
+            return;
+        }
+
         if (node.props.type === 'ionInput') {
 
             node.define({
                 type: "input",
                 component: Input,
-                props: ["labelPosition"]
+                props: ["labelPosition", "inputType"]
             })
             return;
         }
