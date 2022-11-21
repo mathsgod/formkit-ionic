@@ -23,7 +23,7 @@ props.context.node.on("message-removed", showErrorMessage)
 </script>
 
 <template>
-    <ion-item :class="{ 'ion-invalid': error }">
+    <ion-item :class="{ 'ion-invalid': error }" v-bind="context.attrs">
         <ion-label :position="context.labelPosition">{{ context.label }}</ion-label>
         <slot></slot>
         <ion-note slot="helper" v-text="context.help"></ion-note>
