@@ -1,5 +1,6 @@
 <script setup >
 import { ref } from "vue";
+import { IonButton, IonCol, IonRow } from "@ionic/vue";
 let data = ref({})
 
 let options = {
@@ -43,7 +44,7 @@ let onSubmit = () => {
       </FormKit>
 
       <FormKit type="ionTextarea" name="textarea1" label="ionTextarea" label-position="stacked" />
-      
+
       <ion-row>
         <ion-col>
           <ion-button type="submit" color="danger" expand="block">Sign In</ion-button>

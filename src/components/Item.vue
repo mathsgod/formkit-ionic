@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { IonItem, IonLabel, IonNote } from '@ionic/vue'
 let props = defineProps({
     context: Object
 });
@@ -14,12 +15,14 @@ props.context.node.on("message-added", showErrorMessage)
 props.context.node.on("message-updated", showErrorMessage)
 props.context.node.on("message-removed", showErrorMessage)
 
+
 </script>
 
 <template>
-    <ion-item>
-        <ion-label>{{ context.label }}</ion-label>
+    <ion-item :class="{ 'ion-invalid': error }" v-bind="context.attrs">
+        <ion-label :position="context.labelPosition">{{ context.label }}</ion-label>
         <slot></slot>
-        <ion-note slot="helper">{{ context.help }}</ion-note>
+        <ion-note slot="helper" v-text="context.help"></ion-note>
+        <ion-note slot="error" v-text="error"></ion-note>
     </ion-item>
 </template>
