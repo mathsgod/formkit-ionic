@@ -15,6 +15,6 @@ watch(() => value.value, (val) => {
 </script>
 <template>
     <MyItem :context="context">
-        <ion-input v-model="context.node.value" @ion-blur="context.handlers.blur" />
+        <ion-input v-model="value" @ion-blur="context.handlers.blur" />
     </MyItem>
 </template>
