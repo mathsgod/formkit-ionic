@@ -1,6 +1,7 @@
 <script setup>
 import { ref, watch } from "vue"
 import Item from "./Item.vue";
+import { IonTextarea } from "@ionic/vue";
 const props = defineProps({
     context: Object,
 })

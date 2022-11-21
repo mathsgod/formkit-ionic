@@ -29,5 +29,6 @@
   },
   "main": "dist/formkit-ionic.umd.cjs",
   "module": "dist/formkit-ionic.js",
+  "types": "./dist/components/index.d.ts",
   "license": "MIT"
 }

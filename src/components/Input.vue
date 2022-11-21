@@ -1,5 +1,6 @@
 <script setup>
 import { ref, watch } from "vue"
+import { IonInput } from "@ionic/vue";
 import Item from "./Item.vue"
 const props = defineProps({
     context: Object,
@@ -17,6 +18,6 @@ let type = props.context.inputType || 'text';
 
 <template>
     <Item :context="context">
-        <ion-input v-model="value" v-bind="context.attrs" @ionBlur="context.handlers.blur" :type="type" />
+        <IonInput v-model="value" v-bind="context.attrs" @ionBlur="context.handlers.blur" :type="type" />
     </Item>
 </template>

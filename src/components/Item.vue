@@ -1,5 +1,6 @@
 <script setup>
 import { ref, watch } from "vue"
+import { IonItem, IonNote, IonLabel } from "@ionic/vue";
 const props = defineProps({
     context: Object,
 })
