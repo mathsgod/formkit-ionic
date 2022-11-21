@@ -1,11 +1,11 @@
-import Item from './Item.vue';
-import Input from './Input.vue';
-import Select from './Select.vue';
-import Textarea from './Textarea.vue';
-import { FormKitPlugin } from '@formkit/core';
+import Item from './components/Item.vue';
+import Input from './components/Input.vue';
+import Select from './components/Select';
+import Textarea from './components/Textarea';
 
-export const createIonicPlugin = (): FormKitPlugin => {
-    return (node) => {
+export const createIonicPlugin = () => {
+    return (node: any) => {
+        console.log("createIonicPlugin", node.props.type);
         if (node.props.type === "ionItem") {
             node.define({
                 type: "input",

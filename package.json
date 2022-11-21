@@ -27,8 +27,6 @@
     "vue-router": "^4.1.6",
     "vue-tsc": "^0.40.4"
   },
-  "main": "dist/formkit-ionic.umd.cjs",
-  "module": "dist/formkit-ionic.js",
-  "types": "./dist/components/index.d.ts",
+  "main": "dist/formkit-ionic.js",
   "license": "MIT"
 }

@@ -24,7 +24,7 @@ import '@formkit/themes/genesis'
 
 import { plugin, defaultConfig } from '@formkit/vue'
 
-import { createIonicPlugin } from './components';
+import { createIonicPlugin } from './index';
 
 import router from './router';
 
