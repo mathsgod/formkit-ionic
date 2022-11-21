@@ -8,13 +8,10 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Input: typeof import('./src/components/Input.vue')['default']
-    IonButton: typeof import('@ionic/vue')['IonButton']
-    IonCol: typeof import('@ionic/vue')['IonCol']
     IonInput: typeof import('@ionic/vue')['IonInput']
     IonItem: typeof import('@ionic/vue')['IonItem']
     IonLabel: typeof import('@ionic/vue')['IonLabel']
     IonNote: typeof import('@ionic/vue')['IonNote']
-    IonRow: typeof import('@ionic/vue')['IonRow']
     IonSelect: typeof import('@ionic/vue')['IonSelect']
     IonSelectOption: typeof import('@ionic/vue')['IonSelectOption']
     IonTextarea: typeof import('@ionic/vue')['IonTextarea']
