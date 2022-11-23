@@ -5,7 +5,6 @@ import Textarea from './components/Textarea.vue';
 
 export const createIonicPlugin = () => {
     return (node: any) => {
-        console.log("createIonicPlugin", node.props.type);
         if (node.props.type === "ionItem") {
             node.define({
                 type: "input",
@@ -15,7 +14,6 @@ export const createIonicPlugin = () => {
         }
 
         if (node.props.type === 'ionInput') {
-
             node.define({
                 type: "input",
                 component: Input,
@@ -32,7 +30,6 @@ export const createIonicPlugin = () => {
             })
             return;
         }
-
 
         if (node.props.type === "ionTextarea") {
             node.define({
